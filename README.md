@@ -3,7 +3,7 @@
 - [x] Scaffold Product Routing 🔥 
 - [x] Connect MongoDB Database 🍃 
 - [x] Implement Authentication ✋ 
-- [ ] Modern Shopping Cart 🛒
+- [x] Modern Shopping Cart 🛒
 - [ ] Integrate Stripe Payments 💰 
 - [ ] Deploy to AWS Amplify ☁️ 
 ## 1. How To Run Locally ?
