@@ -1,3 +1,6 @@
+const path = require('path')
+require('dotenv').config({path: path.resolve(process.cwd() + '/.env.local'), debug: false})
+
 export default {
-    mongoURI: 'mongodb+srv://JalalMitali:<password>@mitalishop.wqclo22.mongodb.net/?retryWrites=true&w=majority'
+    mongoURI: process.env.MONGO_URI
 }

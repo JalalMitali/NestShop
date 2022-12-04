@@ -2,6 +2,13 @@
 /dist
 /node_modules
 
+# Keys
+private_key.pem
+public_key.pem
+
+#Env
+.env*.local*
+
 # Logs
 logs
 *.log
