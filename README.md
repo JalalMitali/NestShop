@@ -6,7 +6,9 @@
 - [x] Modern Shopping Cart 🛒
 - [x] Integrate Stripe Payments 💰 
 - [ ] Add Profile Features ℹ️  
-- [ ] Deploy to AWS Amplify ☁️ 
+- [ ] Add Categorie Feature 🆕
+- [ ] Implement Admin Control 👑  
+- [ ] Deploy to AWS Amplify 🥳
 ## 1. How To Run Locally ?
 1. ```git clone https://github.com/JalalMitali/MitaliShop-NestJS.git```
 2. `create MongoDB cluster , create file 'env.local' in root and add the URI ( as in env.example)`
