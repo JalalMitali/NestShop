@@ -6,9 +6,10 @@ import { ProductsModule } from './products/products.module'
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CartModule } from './cart/cart.module';
+import { PaymentsModule } from './payments/payments.module';
 import config from './config/keys'
 @Module({
-  imports: [MongooseModule.forRoot(config.mongoURI), ProductsModule, AuthModule, UsersModule, CartModule],
+  imports: [MongooseModule.forRoot(config.mongoURI), ProductsModule, AuthModule, UsersModule, CartModule, PaymentsModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -4,7 +4,8 @@
 - [x] Connect MongoDB Database 🍃 
 - [x] Implement Authentication ✋ 
 - [x] Modern Shopping Cart 🛒
-- [ ] Integrate Stripe Payments 💰 
+- [x] Integrate Stripe Payments 💰 
+- [ ] Add Profile Features ℹ️  
 - [ ] Deploy to AWS Amplify ☁️ 
 ## 1. How To Run Locally ?
 1. ```git clone https://github.com/JalalMitali/MitaliShop-NestJS.git```
