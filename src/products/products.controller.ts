@@ -6,6 +6,7 @@ import { UpdateProductDto } from './dto/update-product.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { Roles } from 'src/auth/roles.decorator';
 import { Role } from 'src/auth/enums/role.enum';
+import { RolesGuard } from 'src/auth/roles.guard';
 @Controller('products')
 export class ProductsController {
     constructor(private readonly productsService: ProductsService) {}
@@ -20,26 +21,28 @@ export class ProductsController {
     }
 
     @Roles(Role.Admin)
-    @UseGuards(JwtAuthGuard)
+    @UseGuards(JwtAuthGuard, RolesGuard)
     @Post()
     create(@Body() createProductDto: CreateProductDto): Promise<Product> {
         return this.productsService.create(createProductDto);
     }
 
     @Roles(Role.Admin)
+    @UseGuards(JwtAuthGuard, RolesGuard)
     @Delete(':id')
     delete(@Param('id') id): Promise<Product> {
         return this.productsService.delete(id);
     }
 
-    @UseGuards(JwtAuthGuard)
-    @Delete('')
+    @Roles(Role.Admin)
+    @UseGuards(JwtAuthGuard, RolesGuard)
+    @Delete()
     deleteAll(): Promise<Product> {
         return this.productsService.deleteAll();
     }
 
     @Roles(Role.Admin)
-    @UseGuards(JwtAuthGuard)
+    @UseGuards(JwtAuthGuard, RolesGuard)
     @Put(':id')
     update(@Body() updateProductDto: UpdateProductDto, @Param('id') id): Promise<Product> {
         return this.productsService.update(id, updateProductDto)
