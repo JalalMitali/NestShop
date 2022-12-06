@@ -7,7 +7,7 @@
 - [x] Integrate Stripe Payments 💰 
 - [ ] Add Profile Features ℹ️  
 - [ ] Add Categorie Feature 🆕
-- [ ] Implement Admin Control 👑  
+- [x] Implement Admin Control 👑  
 - [ ] Deploy to AWS Amplify 🥳
 ## 1. How To Run Locally ?
 1. ```git clone https://github.com/JalalMitali/MitaliShop-NestJS.git```
