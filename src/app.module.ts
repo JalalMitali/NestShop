@@ -8,9 +8,14 @@ import { UsersModule } from './users/users.module';
 import { CartModule } from './cart/cart.module';
 import { PaymentsModule } from './payments/payments.module';
 import config from './config/keys'
+import { APP_GUARD } from '@nestjs/core';
+import { RolesGuard } from './auth/roles.guard';
 @Module({
   imports: [MongooseModule.forRoot(config.mongoURI), ProductsModule, AuthModule, UsersModule, CartModule, PaymentsModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService,  {
+    provide: APP_GUARD,
+    useClass: RolesGuard,
+  },],
 })
 export class AppModule {}

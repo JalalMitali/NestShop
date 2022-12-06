@@ -1,6 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { Role } from 'src/auth/enums/role.enum';
+import { JwtPayload } from 'src/auth/interfaces/jwt-payload.interface';
+import { Roles } from 'src/auth/roles.decorator';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdatePasswordDto } from './dto/update-password.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
@@ -13,12 +16,17 @@ export class UsersService {
         this.create = this.create.bind(this)
     }
 
+    async findSingleUser(user: JwtPayload): Promise<User | undefined> { 
+        
+        return user.username == null ? await this.findOneByEmail(user.email) : await this.findOneByUsername(user.username)  
+    }
+
     async findOneByUsername(username: string): Promise<User | undefined> {
-        return this.userModel.findOne(user => user.username === username);
+        return this.userModel.findOne({ username: username });
     }
 
     async findOneByEmail(email: string): Promise<User | undefined> {
-        return this.userModel.findOne(user => user.email === email);
+        return this.userModel.findOne({ email: email });
     }
 
     async create(user: CreateUserDto): Promise<User> {
@@ -28,7 +36,7 @@ export class UsersService {
                 ...user,
                 ...{password: hash}
             }
-            const saveUser = new this.userModel(item)
+            const saveUser = new this.userModel({...item, roles: [Role.User]})
             return await saveUser.save()
             // Store hash in your password DB.
         });
