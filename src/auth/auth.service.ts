@@ -36,7 +36,8 @@ export class AuthService {
     }
     
     return bcrypt.compare(user.password, auth.password).then(function(result) {
-      return result
+      if(!result) return result;
+      return auth;
     });
   }
 
