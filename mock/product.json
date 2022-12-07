@@ -1,0 +1,12 @@
+{
+    "title": "Nike Multi Smart Shoe",
+    "description": "Men Running Shoes",
+    "image": "https://firebasestorage.googleapis.com/v0/b/mitalishopgit.appspot.com/o/nest%2Fimages%2Fproduct1.png?alt=media&token=9d8bafba-bda9-4661-ae93-f065c7455d8a",
+    "tags": ["eCommerce"],
+    "slug": "product1",
+    "quantity": 10,
+    "price": 1099,
+    "categories":  ["Nest"],
+    "added": 2022
+}
+    
