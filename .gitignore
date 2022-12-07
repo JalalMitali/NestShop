@@ -2,6 +2,12 @@
 /dist
 /node_modules
 
+#Firebase Hosting
+.firebase 
+.github 
+.firebaserc
+firebase.json
+
 # Keys
 private_key.pem
 public_key.pem
