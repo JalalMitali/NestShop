@@ -8,6 +8,7 @@
     "price": 1099,
     "categories":  ["Nest"],
     "added": 2022,
-    "style": "from-violet-500 to-indigo-500 shadow-lg shadow-violet-500"
+    "style": "from-violet-500 to-indigo-500 shadow-lg shadow-violet-500",
+    "rating": "5"
 }
     
