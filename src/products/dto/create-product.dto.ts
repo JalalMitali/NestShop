@@ -8,4 +8,6 @@ export class CreateProductDto {
     readonly price: number;
     readonly categories: string[];
     readonly added: number;
+    readonly rating: number;
+    readonly style: string[];
 }

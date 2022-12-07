@@ -35,6 +35,11 @@ export class Product {
     @Prop({required: true})
     added: number;
 
+    @Prop({required: true})
+    rating: string
+
+    @Prop({required: true})
+    style: string
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
