@@ -3,12 +3,6 @@
     "env": {
         "MONGO_URI": "@shop_api_mongo_uri"
     },
-    "builds": [
-        {
-            "src": "src/main.ts",
-            "use": "@vercel/node"
-        }
-    ],
     "functions": {
         "/(.*)": {
           "memory": 3008,
