@@ -8,7 +8,7 @@
 - [ ] Add Profile Features ℹ️  
 - [ ] Add Categorie Feature 🆕
 - [x] Implement Admin Control 👑  
-- [x] Deploy to Firebase Hosting 🥳
+- [x] Deploy to Vercel 🥳
 ## 1. How To Run Locally ?
 1. ```git clone https://github.com/JalalMitali/MitaliShop-NestJS.git```
 2. `create MongoDB cluster , create file 'env.local' in root and add the URI ( as in env.example)`
