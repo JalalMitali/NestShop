@@ -5,7 +5,7 @@ import { Product } from './interfaces/product.interface';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { Roles } from 'src/auth/roles.decorator';
-import { Role } from 'src/auth/enums/role.enum';
+import { Role } from 'src/auth/enums/role';
 import { RolesGuard } from 'src/auth/roles.guard';
 @Controller('products')
 export class ProductsController {
