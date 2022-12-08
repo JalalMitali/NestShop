@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Role } from 'src/auth/enums/role';
+import { Role } from 'src/auth/enums/role.enum';
 import { JwtPayload } from 'src/auth/interfaces/jwt-payload.interface';
 import { Roles } from 'src/auth/roles.decorator';
 import { CreateUserDto } from './dto/create-user.dto';
